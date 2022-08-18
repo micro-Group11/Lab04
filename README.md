@@ -26,17 +26,18 @@ ID Number 	Name (As per the institute records )
 
 ## Content
 
-- OBJECTIVE
-- APPARATUS
-- INRODUCTION
-- TASK
-- OPERTATION TABLE
-- BREADBOARD IMPLEMENTATION
-- THE PCB DESIGN
-- AN IMAGE OF THE REAL IMPLEMENTATION
-- CODE
-- DISCUSSION
-- REFERENCES
+- Objective
+- Apparatus
+- Introduction
+- Task
+- Operation Table
+- Breadboard Implementation
+- The PCB Design
+- An Image of the Real Implementation
+- Code
+- Results
+- Discussion
+- References
 
 ## Objective
 
@@ -118,9 +119,11 @@ Below is a water tank that has two DC motors where the motor one is used to pump
 ## An Images of the real implementation
 ![Screenshot (192)](https://user-images.githubusercontent.com/111219871/185343895-b89c7250-3784-4378-8e7f-17fc18916a26.png)
 ![41](https://user-images.githubusercontent.com/111219871/185343954-e5dbf605-1742-4069-b57c-8a934c4e805d.png)
+Case 1- Motor1 is turned on
 ![42](https://user-images.githubusercontent.com/111219871/185343965-3175a393-9792-4bb7-b5a5-2c7618bfac54.png)
-![43](https://user-images.githubusercontent.com/111219871/185343970-a05e83c7-1249-4586-b411-baa76cf987ca.png)
+Case 2- Motor1 is turned on
 ![Screenshot (231)](https://user-images.githubusercontent.com/111219871/185345220-73de7905-bf20-4dfa-a2f8-d8105275125d.png)
+Case 3- Motor2 is turned on
 
 ## Code
 
