@@ -99,11 +99,19 @@ Below is a water tank that has two DC motors where the motor one is used to pump
 
 ## Operation Table
 
-**BREADBOARD IMPLEMENTATION**
+## Breadboard Implementation
+![01](https://user-images.githubusercontent.com/111219871/185334762-2fb08e60-d8ee-4bcd-a9d3-85a43d0aba9c.jpg)
+![02](https://user-images.githubusercontent.com/111219871/185334767-5117ad83-274a-489f-862d-53bd5d0eaf78.jpg)
+![03](https://user-images.githubusercontent.com/111219871/185334769-bfba5dab-acf0-485b-b91a-6444e325e8a8.jpg)
+![04](https://user-images.githubusercontent.com/111219871/185334772-055d599b-9307-4387-a9e2-d940a328ab6b.jpg)
 
-**THE PCB DESIGN**
+## The PCB design
+![21](https://user-images.githubusercontent.com/111219871/185335136-ab46e476-7b1f-43eb-b671-267df63eb36e.jpg)
+![22](https://user-images.githubusercontent.com/111219871/185335149-5a2ce07a-ceff-42fe-a1d1-109b5cf7b150.jpg)
+![23](https://user-images.githubusercontent.com/111219871/185335153-bc4b9b47-6f2a-4c85-8504-4ba2b999c027.jpg)
+![20220720_190551](https://user-images.githubusercontent.com/111219871/185336069-d2c9f940-5771-4b92-859b-b936fd3ace09.jpg)
 
-**AN IMAGE OF THE REAL IMPLEMENTATION**
+## An Images of the real implementation
 
 ## Code
 
