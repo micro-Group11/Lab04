@@ -120,50 +120,59 @@ Below is a water tank that has two DC motors where the motor one is used to pump
 
 ## Code
 
-//PIC16F877A Configuration Bit Settings
+    //PIC16F877A Configuration Bit Settings
+    //'C' source line config statements
+    //CONFIG 
+    #pragma config FOSC = HS // Oscillator Selection bits (HS oscillator) 
+    #pragma config WDTE = OFF // Watchdog Timer Enable bit (WDTdisabled) 
+    #pragma config PWRTE = ON // Power-up Timer Enable bit (PWRT enabled) 
+    #pragma config BOREN = ON // Brown-out Reset Enable bit (BOR enabled) 
+    #pragma config LVP = OFF // Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit (RB3 is digital I/O, HV on MCLR must be used for programming) 
+    #pragma config CPD = OFF // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off) 
+    #pragma config WRT = OFF // Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by EECON control)
+    #pragma config CP = OFF // Flash Program Memory Code Protection bit (Code protection off)
+    // #pragma config statements should precede project file includes. 
+    //Use project enums instead of \#define for ON and OFF.
 
-//'C' source line config statements
+    #include <xc.h> 
+    #define _XTAL_FREQ 20000000 
+    #define ECHO RB0
+    #define TRIG RB1 
+    #define MOTOR1 RC3 
+    #define MOTOR2 RC5
 
-//CONFIG 
+    //TIMER INTERRUPT
+    void __interrupt() timer_isr(void){ 
+    if(TMR1IF==1){
+    MOTOR1 = 0; 
+    MOTOR2 = 1; 
+    __delay_ms(500); 
+    MOTOR2= 0; 
+    TMR1IF = 0;
+    } 
+    }
 
-#pragma config FOSC = HS // Oscillator Selection bits (HS oscillator) 
+    void main(void){
 
-#pragma config WDTE = OFF // Watchdog Timer Enable bit (WDTdisabled) 
+    //initializing input output pins 
+    TRISB0= 1; //ECO PIN
+    TRISB1= 0; //TRIGGER PIN 
+    //TRISB2= 1; //ECO PIN 
+    TRISC3= 0; //BLUE LED-MOTOR1 
+    TRISC5= 0; //RED LED- MOTOR 2 
 
-#pragma config PWRTE = ON // Power-up Timer Enable bit (PWRT enabled) 
+    //T1C0N REGISTER 
+    T1CON = 0X20; //1:4 PRESCALAR WITH INTERNAL CLOCK 
 
-#pragma config BOREN = ON // Brown-out Reset Enable bit (BOR enabled) 
+    //INTCON REGISTER 
+    GIE = 1; //GLOBAL INTERRUPTS ENABLED 
+    PEIE= 1; //PHERIPHERAL INTERRUPT ENABLED 
 
-#pragma config LVP = OFF // Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit (RB3 is digital I/O, HV on MCLR must be used for programming) 
+    //PIR1 REGISTER 
+    TMR1IF = 0; //NO OVERFLOW 
 
-#pragma config CPD = OFF // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off) 
-
-#pragma config WRT = OFF // Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by EECON control)
-
-#pragma config CP = OFF // Flash Program Memory Code Protection bit (Code protection off)
-
-// #pragma config statements should precede project file includes. 
-
-//Use project enums instead of \#define for ON and OFF.
-
-\#include \<xc.h\> 
-\#define \_XTAL\_FREQ 20000000 
-\#define ECHO RB0
-\#define TRIG RB1 
-\#define MOTOR1 RC3 
-\#define MOTOR2 RC5
-
-//TIMER INTERRUPT
-void \_\_interrupt() timer\_isr(void){ if(TMR1IF==1){
-MOTOR1 = 0; MOTOR2 = 1; \_\_delay\_ms(500); MOTOR2= 0; TMR1IF = 0; } }
-
-void main(void){ //initializing input output pins TRISB0= 1; //ECO PIN
-TRISB1= 0; //TRIGGER PIN //TRISB2= 1; //ECO PIN TRISC3= 0; //BLUE LED-
-MOTOR1 TRISC5= 0; //RED LED- MOTOR 2 //T1C0N REGISTER T1CON = 0X20;
-//1:4 PRESCALAR WITH INTERNAL CLOCK //INTCON REGISTER GIE = 1; //GLOBAL
-INTERRUPTS ENABLED PEIE= 1; //PHERIPHERAL INTERRUPT ENABLED //PIR1
-REGISTER TMR1IF = 0; //NO OVERFLOW //PIE REGISTER TMR1IE = 1; //TIMER1
-INTERRUPT ENABLED
+    //PIE REGISTER 
+    TMR1IE = 1; //TIMER1 INTERRUPT ENABLED
 
     MOTOR1 = 0;
     MOTOR2 = 0;
@@ -217,7 +226,9 @@ INTERRUPT ENABLED
 
 }
 
+## Results
 
+According to the above code, distance between the untrasonic sensor and a object will be calculated. MOTOR1 will turn on if the calculated distance is less than 10 centimeters. MOTOR1 will also turn on if the calculated distance is between 10 and 20 centimeters. If the calculated distance is between 20 and 30 centimeters, timer1 interrupt flag will be logic high.
 
 ## Discussion
 
