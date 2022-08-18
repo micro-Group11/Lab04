@@ -60,23 +60,6 @@ The main objective of this lab is for you to develop a small water level control
 - IN4007GL Diode
 - Soldering iron
 - L293D ic
- ![Picture 7](RackMultipart20220814-1-xydplv_html_95bf67d4ae04b375.gif)
-
-![Shape2](RackMultipart20220814-1-xydplv_html_58e784f1c113c381.gif) ![Picture 2](RackMultipart20220814-1-xydplv_html_e9a6663106c90e76.gif)
-
- ![Picture 4](RackMultipart20220814-1-xydplv_html_ebbde0f9a9520579.gif) ![Picture 2](RackMultipart20220814-1-xydplv_html_17175841329071ce.gif) ![Picture 8](RackMultipart20220814-1-xydplv_html_75d8aeddebe45796.gif)
-
-**ultrasonic distance sensors Breadboard power supply module DC motors**
-
-**IN4007GL Diode**  **Soldering iron**
-
-**Crystal oscillator**
-
-**L293D ic**
-
-**Pic adaptor**
-
-**PIC16F877A**
 
 ## Introduction
 
@@ -248,7 +231,7 @@ In this project, we have learnt lots to program and simulate and this was a good
 - LiveTechIndia. 2022. _Water Level Indicator using Micro-Controller PIC16F877A | Livewire_. [online] Available at: \<https://livetechindia.com/water-level-indicator-   using-micro-controller-pic16f877a/\> [Accessed 20 July 2022].
 - Myint1, K. and Tun2, M., 2022. _PIC MICROCONTROLLER BASED AUTOMATED WATER LEVEL CONTROL SYSTEM_. [online] Zenodo. Available at: \<https://zenodo.org/record/3352817\>   [Accessed 20 July 2022].
 
-- 2022. [online] Available at <https://www.researchgate.net/publication/335210568\_PIC\_Microcontroller\_
+- \2022. [online] Available at <https://www.researchgate.net/publication/335210568\_PIC\_Microcontroller\_
   Based\_Water\_level\_Monitoring\_and\_Controlling\_System\_using\_Sharp\_Infra-   red\_range\_sensor\> [Accessed 20 July 2022].
 - George, L. and George, L., 2022. _Water Level Indicator Controller Using PIC Microcontroller_. 
   [online] electroSome. Available at: \<https://electrosome.com/water-level-indicator-controller-pic/\> [Accessed 20 July 2022].
