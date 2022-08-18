@@ -98,6 +98,7 @@ A direct current (DC) motor is a type of electric device that converts electrica
 Below is a water tank that has two DC motors where the motor one is used to pump the water into the tank the motor two is used to suck the water out from the water tank and there are three sensors that are used to measure the water level of the tank. The operations of the two DC motors according to the switch state is given in a table right after the diagram.
 
 ## Operation Table
+![Capture](https://user-images.githubusercontent.com/111219871/185356673-943aef1f-9775-41d0-b384-61db702a1efb.PNG)
 
 ## Breadboard Implementation
 ![01](https://user-images.githubusercontent.com/111219871/185334762-2fb08e60-d8ee-4bcd-a9d3-85a43d0aba9c.jpg)
@@ -106,6 +107,9 @@ Below is a water tank that has two DC motors where the motor one is used to pump
 ![04](https://user-images.githubusercontent.com/111219871/185334772-055d599b-9307-4387-a9e2-d940a328ab6b.jpg)
 
 ## The PCB design
+![Screenshot (232)](https://user-images.githubusercontent.com/111219871/185356111-97bdfc35-097c-4d0d-8707-88224288a22a.png)
+![Screenshot (233)](https://user-images.githubusercontent.com/111219871/185356123-1c5053da-e1ce-497e-aef9-9eabf09943e4.png)
+![Screenshot (234)](https://user-images.githubusercontent.com/111219871/185356125-59298d4f-910d-4921-8f90-af7740fb6e77.png)
 ![21](https://user-images.githubusercontent.com/111219871/185335136-ab46e476-7b1f-43eb-b671-267df63eb36e.jpg)
 ![22](https://user-images.githubusercontent.com/111219871/185335149-5a2ce07a-ceff-42fe-a1d1-109b5cf7b150.jpg)
 ![23](https://user-images.githubusercontent.com/111219871/185335153-bc4b9b47-6f2a-4c85-8504-4ba2b999c027.jpg)
@@ -228,7 +232,7 @@ Below is a water tank that has two DC motors where the motor one is used to pump
 
 ## Results
 
-According to the above code, distance between the untrasonic sensor and a object will be calculated. MOTOR1 will turn on if the calculated distance is less than 10 centimeters. MOTOR1 will also turn on if the calculated distance is between 10 and 20 centimeters. If the calculated distance is between 20 and 30 centimeters, timer1 interrupt flag will be logic high.
+According to the above code, distance between the untrasonic sensor and a object will be calculated. MOTOR1 will turn on if the calculated distance is less than 10 centimeters. MOTOR1 will also turn on if the calculated distance is between 10 and 20 centimeters. If the calculated distance is between 20 and 30 centimeters, timer1 interrupt flag will be logic high. Then, Moto1 will ther off and Motor2 will turn on for 500 miliseconds and then turn off. Since within 20 to 30cm range timer1flag is hogic high, between that range motor2 can be observed as constently turned on. 
 
 ## Discussion
 
